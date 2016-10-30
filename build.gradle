@@ -706,5 +706,23 @@ configure(smokeTestProjects) {
 	}
 }
 
+configure(javaProjects) {
+    apply plugin: 'maven-publish'
+    publishing {
+        repositories {
+            maven {
+                name = "BuildEclipseOrg"
+                url "/opt/public/rt/virgo/gradle/bundles"
+            }
+        }
+        publications {
+            virgo(MavenPublication) {
+                groupId 'org.eclipse.virgo'
+                from components.java
+            }
+        }
+    }
+}
+
 task wrapper(type: Wrapper) { gradleVersion = '2.10' } // CQ 11168
 
