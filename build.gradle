@@ -115,6 +115,8 @@ ext.repositoryProjects = [
 
 ext.testUtils = [
 	project(':test:org.eclipse.virgo.test.stubs'),
+    project(':test:org.eclipse.virgo.test.launcher'),
+    project(':test:org.eclipse.virgo.test.framework'),
 	project(':medic:org.eclipse.virgo.medic.test'),
 	project(':kernel:org.eclipse.virgo.kernel.stubs'),
 	project(':test:org.eclipse.virgo.test.tools'),
