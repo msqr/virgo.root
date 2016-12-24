@@ -415,6 +415,7 @@ configure(javaProjects + aspectjProjects) {
 
 	apply plugin: 'java'
 	apply plugin: 'eclipse'
+	apply plugin: 'idea'
 
 	compileJava {
 		options.encoding = 'utf-8'
@@ -731,4 +732,3 @@ configure(javaProjects) {
 }
 
 task wrapper(type: Wrapper) { gradleVersion = '2.10' } // CQ 11168
-
