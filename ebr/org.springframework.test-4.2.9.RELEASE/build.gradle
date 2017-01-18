@@ -8,8 +8,7 @@ dependencies {
     sourceBundle group: 'org.springframework', name: 'spring-test', version: "${springframeworkVersion}"
 }
 
-task rewriteJar {
-    tasks['publish'].dependsOn('rewriteJar')
+task rewriteJar(dependsOn: 'bundlor') {
     String jarFileName = file(buildDir.path + "/org.springframework.test-${springframeworkVersion}.jar").path
     doLast() {
         ZipFile jarFile = new ZipFile(jarFileName)
